@@ -1,0 +1,201 @@
+#article {
+  max-width: 640px;
+}
+
+.d3-container {
+  text-align: left;
+  background-color: #F3F4F3;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: normal;
+}
+
+.dek {
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hed {
+  display: block;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18pt;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.quit {
+  text-align: center;
+  display: none;
+  cursor: default;
+  height: 0;
+  padding-left: 5px;
+  color: #999;
+  height: 1.2em
+}
+
+.tooltip-container {
+  padding: 10px;
+}
+
+.my-tooltip {
+  color: black;
+  overflow: visible;
+  position: absolute;
+  background-color: #f4f3f4;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  /* width: 100%; */
+  /* border-radius: 10px; */
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 500;
+  font-size: 10pt;
+  max-width: 350px;
+}
+
+.my-tooltip h2 {
+  font-size: 14pt;
+}
+
+.my-tooltip strong {
+  white-space: nowrap;
+}
+
+.box-shadow-right {
+  box-shadow: 3px 3px #000;
+}
+
+.box-shadow-left {
+  box-shadow: -3px 3px #000;
+}
+
+.my-tooltip h2 {
+  font-size: 2em;
+}
+
+.orange-text {
+  color: #ED6A5A;
+}
+
+svg {
+  color: #373739;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3;
+}
+
+.dot, .line, #chart-3 .rect {
+  pointer-events: none;
+}
+
+.bottom {
+  width: 100%;
+}
+
+.source {
+  display: inline-block;
+  width: 70%;
+  padding: 5px;
+  font-size: 10pt;
+}
+
+.gfx-logo {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+  padding: 5px;
+}
+
+.gfx-logo img {
+  width: 100%;
+}
+
+.chart {
+  padding: 0;
+  margin: 0;
+}
+
+/* basic positioning */
+.legend {
+  overflow: visible;
+  display: flex;
+  padding: 0 20px;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.legend li {
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  font-size: 12pt;
+  line-height: normal;
+}
+
+.legend div {
+  display: inline;
+  border: 1px solid #fff !important;
+  float: left !important;
+  width: 12pt !important;
+  height: 12pt !important;
+  padding: 2px !important;
+}
+
+.legend .legend-vaxxed .legend-sq {
+  background-color: #6BA292;
+}
+
+.legend .legend-unvaxxed .legend-sq {
+  background-color: #ED6A5A;
+}
+
+.legend-sq {
+  pointer-events: none;
+}
+
+.chart br {
+  display: none
+}
+
+@media screen and (min-width: 767px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 10pt;
+  }
+
+  .my-tooltip {
+    box-sizing: border-box;
+    box-sizing: -webkit-border-box;
+    max-width: 100%;
+    min-width: 100%;
+    position: relative !important;
+    overflow: auto;
+    text-align: center;
+    border-radius: 0px !important;
+  }
+
+  .source {
+    width: 75%;
+  }
+
+  .gfx-logo {
+    width: 25%;
+  }
+}
