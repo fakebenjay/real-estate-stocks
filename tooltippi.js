@@ -1,6 +1,6 @@
 function tooltipText(values) {
   return `<span class='quit'>x</span><div class="tooltip-container"><h2>${values.location}</h2>
-  <div><strong style="background-color:#6BA292;color:white;padding:0 2px;font-size:12pt;">S&P 500 (SPX)</strong> ${numeral(values.spx).format('0,0[.]00')} (${numeral(values.spxChange).format('0[.]0%')} change since January 3, 2022)</div>
+  <div><strong style="background-color:#6BA292;color:white;padding:0 2px;font-size:12pt;">S&P 500 (SPX)</strong> ${numeral(values.spx).format('0,0[.]00')} (${numeral(values.spxChange).format('0[.]0%')} change since Jan. 3, 2022)</div>
   <div><strong style="background-color:#ED6A5A;color:white;padding:0 2px;">Unvaccinated:</strong> ${numeral(parseInt(values.unvaxxed)).format('0,0')} staffers (${numeral(parseInt(values.unvaxxed)/parseInt(values.total)).format('0[.]0%')} of total)</div>
   <div><strong>${numeral(values.total).format('0,0')} total staffers</strong></div>
   </div>`
@@ -18,7 +18,7 @@ function tipTextLine3(values) {
   var date = new Date(values.date)
 
   return `<span class='quit'>x</span><div class="tooltip-container">
-  <div><h2 style="font-size:14pt;text-align:center;margin-bottom:10px;">${date.toLocaleDateString("en-US", dateOptions)}</h2>
+  <div><h2 style="font-size:14pt;text-align:center;margin-bottom:10px;">${date.toLocaleDateString("en-US", dateOptions).replaceAll('January', 'Jan.').replaceAll('February', 'Feb.')}</h2>
   <div style="text-align:center;font-size:12pt;">
   <strong style='background-color:#654f6f;color:white;'>&nbsp;S&P 500 Index (SPX)&nbsp;</strong><br/>&nbsp;${numeral(values.spx).format('0,0[.]00')} <span style="background-color:${colorScale(values.spxChange)};color:${values.spxChange > -.3 ? 'black' : 'white'};">&nbsp;(${values.spxChange > 0 ? '+':''}${numeral(values.spxChange).format('0[.]0%')})&nbsp;</span></div><br/>
   <div style="text-align:center;font-size:10pt;">
